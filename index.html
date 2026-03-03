@@ -1,170 +1,370 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
+<link rel="stylesheet" href="./styles/index.css">
+
 <head>
-    <title>ꜱᴛʀᴏɴɢᴅᴏɢ xᴘ</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1609993827735056" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" id="faviconLink" />
 
-    <style>
-        /* ALL YOUR CSS FIXED BELOW */
-        :root {
-            --red: rgb(220, 53, 69);
-            --green: rgb(40, 167, 69);
-            --ff: "Nunito", Arial, sans-serif;
-            --bg: #2e2e2e;
-        }
+<title>ꜱᴛʀᴏɴɢᴅᴏɢ xᴘ</title>
 
-        body {
-            font-family: var(--ff);
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg);
-            overflow-x: hidden;
-        }
+<meta charset="UTF-8" />
 
-        .navbar {
-            background-color: rgba(50, 50, 50, 0.9);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 25px 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
-        .logo {
-            transition: 0.3s ease-out;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-        .logo .xp {
-            color: orange;
-        }
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .menu-icon {
-            font-size: 2.5rem;
-            cursor: pointer;
-            color: white;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
-        .slide-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 300px;
-            background: #333;
-            color: white;
-            z-index: 1003;
-            transition: transform 0.5s ease;
-            transform: translateX(-100%);
-            padding: 20px;
-        }
+<script>
 
-        .slide-menu.active {
-            transform: translateX(0);
-        }
+async
 
-        .search-bar {
-            padding: 0.8rem;
-            border-radius: 10px;
-            border: none;
-            width: 200px;
-        }
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1609993827735056"
 
-        .games-grid {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
-            justify-content: center;
-            gap: 20px;
-        }
+crossorigin="anonymous"
 
-        .card {
-            width: 150px;
-            height: 150px;
-            background: #444;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            transition: 0.3s;
-        }
+</script>
 
-        .card:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px orange;
-        }
+<link rel="canonical" href="https://65s.org/" />
 
-        /* FIXED THE PRIVACY POLICY ERROR HERE */
-        .privacy-policy {
-            color: #007bff;
-        }
+        <meta
 
-        .modal-container {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            background: rgba(0,0,0,0.5);
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
-    </style>
-</head>
-<body>
+            name="description"
 
-    <nav class="navbar">
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <div class="logo">ꜱᴛʀᴏɴɢᴅᴏɢ <span class="xp">xᴘ</span></div>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search...">
-        </div>
-    </nav>
+            content="IXL is the world's most popular subscription-based learning site for K–12. Used by over 17 million students, IXL provides personalized learning in more than 17,000 topics, covering math, language arts, science, social studies, and Spanish. Interactive questions, awards, and certificates keep kids motivated as they master skills."
 
-    <div id="slideMenu" class="slide-menu">
-        <h3>Menu</h3>
-        <p>Categories</p>
-        <hr>
-        <a href="#" style="color:white; text-decoration:none;">Action</a><br><br>
-        <a href="#" style="color:white; text-decoration:none;">Adventure</a>
-    </div>
+        />
 
-    <div class="games-grid" id="topGameList">
-        <div class="card">Game 1</div>
-        <div class="card">Game 2</div>
-        <div class="card">Game 3</div>
-    </div>
+        <meta property="og:title" content="IXL | Math, Language Arts, Science, Social Studies, and Spanish"/>
 
-    <script>
-        function toggleMenu() {
-            document.getElementById('slideMenu').classList.toggle('active');
-        }
+        <meta
 
-        // Firebase Setup
-        const firebaseConfig = {
-            apiKey: "AIzaSyBh-VnGiP4qZD0r14gfn9dr77GwtslpTqU",
-            authDomain: "strongdog-auth.firebaseapp.com",
-            projectId: "strongdog-auth",
-            storageBucket: "strongdog-auth.appspot.com",
-            messagingSenderId: "936276282572",
-            appId: "1:936276282572:web:a802b7f609381ff9428669",
-            measurementId: "G-0YLTCV2MMS",
-        };
-        // Initializing Firebase logic...
-    </script>
-</body>
-</html>
+        property="og:description"
+
+        content="IXL is the world's most popular subscription-based learning site for K–12. Used by over 17 million students, IXL provides personalized learning in more than 17,000 topics, covering math, language arts, science, social studies, and Spanish. Interactive questions, awards, and certificates keep kids motivated as they master skills."
+
+        />
+
+        <meta property="og:url" content="https://www.ixl.com"/>
+
+        <meta property="og:type" content="website"/>
+
+        <meta property="og:site_name" content="IXL Learning"/>
+
+        <meta
+
+            property="og:image"
+
+            content="https://www.ixl.com/dv3/powZqMuTE7du4asFrVyNGxxoqkw/yui3/opengraph/assets/general_us.png"
+
+        />
+
+
+
+
+
+        <meta
+
+            property="og:image"
+
+            content="https://www.ixl.com/dv3/powZqMuTE7du4asFrVyNGxxoqkw/yui3/opengraph/assets/math_us.png"
+
+        />
+
+
+
+
+
+        <meta
+
+            property="og:image"
+
+            content="https://www.ixl.com/dv3/powZqMuTE7du4asFrVyNGxxoqkw/yui3/opengraph/assets/ela_us.png"
+
+        />
+
+
+
+        <meta
+
+        property="og:image"
+
+        content="https://www.ixl.com/dv3/powZqMuTE7du4asFrVyNGxxoqkw/yui3/opengraph/assets/square_og_ixl.png"
+
+        />
+
+        <meta property="twitter:account_id" content="541271822" />
+
+        <meta property="fb:admins" content="100004219775346" />
+
+        
+
+        <meta name="application-name" content="IXL Math"/>
+
+        <meta name="msapplication-config" content="browserconfig.xml" />
+
+        
+
+        <meta name="google-site-verification" content="kpt3FKrW02d2uRyGgwuYKLjPFtmEWbvwmcvXIA3fa6g" />
+
+        <meta name="facebook-domain-verification" content="rluw7ia5q47lmdl7xvuc7j3ile6bjx" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="//monu.delivery/site/4/b/83ce85-6077-474b-b427-b0eb646767b3.js" data-cfasync="false"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+
+{
+
+"@context": "https://schema.org",
+
+"@graph": [
+
+{
+
+"@type": "WebSite",
+
+"url": "https://65s.org/",
+
+"name": "ꜱᴛʀᴏɴɢᴅᴏɢ xᴘ"
+
+},
+
+{
+
+"@type": "WebPage",
+
+"url": "https://65s.org/",
+
+"name": "Home",
+
+"description": "Browse a wide variety of browser games and join the SD community.",
+
+"inLanguage": "en-US"
+
+},
+
+{
+
+"@type": "BreadcrumbList",
+
+"itemListElement": [
+
+{
+
+"@type": "ListItem",
+
+"position": 1,
+
+"name": "Home",
+
+"item": "https://65s.org/"
+
+}
+
+]
+
+}
+
+]
+
+}
+
+</script>
+
+<script>
+
+(function () {
+
+  const allowedHosts = ["kiaca.org", "leatherheat.org", "miflipteaching.org", "okrehabcouncil.org ", "ohiochildlaw.org ", "spreadingsmile.org", "sail79s.org", "agriherault.org", "okrehabcouncil.org", "ohiochildlaw.org", "agriherault.org", "sail79s.org", "spreadingsmile.org", "ssopatents.org", "wikihow.info", "aimable.org", "ldt-workshop.org", "contentkeeper.fastly.shutup.josh.bostoncareercounselor.com", "makaleoku.org", "lunokhod.org", "canvas.education.skills.learning.skincaredeals.org", "roccapalumba.org", "islahiqatar.org", "sorry.gang.this.is.a.linewize.yafers.org"];
+
+  if (!allowedHosts.includes(location.hostname)) return;
+
+console.log('testing')
+
+  const localStorageData = localStorage.getItem('approved')
+
+  if (!localStorageData) {
+
+location.replace("./bio/");
+
+console.log('testing21')
+
+  }
+
+})();
+
+</script>
+
+
+<script data-grow-initializer="">
+
+!(function () {
+
+window.growMe ||
+
+((window.growMe = function (e) {
+
+window.growMe._.push(e);
+
+}),
+
+(window.growMe._ = []));
+
+var e = document.createElement("script");
+
+(e.type = "text/javascript"),
+
+(e.src = "https://faves.grow.me/main.js"),
+
+(e.defer = !0),
+
+e.setAttribute(
+
+"data-grow-faves-site-id",
+
+"U2l0ZTo3YjgwNWM2Ny1kNzYzLTQ2MjktODk3Yi00ZWQ3OWE3OThmYWM="
+
+);
+
+var t = document.getElementsByTagName("script")[0];
+
+t.parentNode.insertBefore(e, t);
+
+})();
+
+</script>
+
+<link rel="icon" type="image/x-icon" href="img/favicon.ico" id="faviconLink" />
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+
+<script>
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyBh-VnGiP4qZD0r14gfn9dr77GwtslpTqU",
+
+authDomain: "strongdog-auth.firebaseapp.com",
+
+projectId: "strongdog-auth",
+
+storageBucket: "strongdog-auth.appspot.com",
+
+messagingSenderId: "936276282572",
+
+appId: "1:936276282572:web:a802b7f609381ff9428669",
+
+measurementId: "G-0YLTCV2MMS",
+
+};
+
+firebase.initializeApp(firebaseConfig);
+
+window.auth = firebase.auth();
+
+window.db = firebase.firestore();
+
+window.rtdb = firebase.database();
+
+</script>
+
+<script>
+
+async function getAllIndexedDBData() {
+
+if (!indexedDB.databases) return {};
+
+let dbList = [];
+
+try {
+
+dbList = await indexedDB.databases();
+
+} catch (e) {
+
+return {};
+
+}
+
+const result = {};
+
+for (const dbInfo of dbList) {
+
+if (!dbInfo.name) continue;
+
+result[dbInfo.name] = await getDataFromDatabase(dbInfo.name);
+
+}
+
+return result;
+
+}
+
+function getDataFromDatabase(dbName) {
+
+return new Promise((resolve, reject) => {
+
+const request = indexedDB.open(dbName);
+
+(request.onsuccess = e => {
+
+const db = e.target.result,
+
+storeNames = Array.from(db.objectStoreNames),
+
+dbData = {},
+
+pendingCount = storeNames.length;
+
+if (!pendingCount) {
+
+db.close(), resolve(dbData);
+
+return;
+
+}
+
+let pending = pendingCount;
+
+storeNames.forEach(storeName => {
+
+const transac
