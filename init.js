@@ -34,7 +34,12 @@ self.C3_PROJECT_DATA_PATH = "data.json";
     }
 
     function patchDataJsonUrl(url) {
-        if (typeof url === "string" && url.includes("data.json") && typeof chrome !== "undefined" && chrome.runtime?.getURL) {
+        if (
+            typeof url === "string" &&
+            url.includes("data.json") &&
+            typeof chrome !== "undefined" &&
+            chrome.runtime?.getURL
+        ) {
             return chrome.runtime.getURL("data.json");
         }
 
@@ -64,7 +69,7 @@ self.C3_PROJECT_DATA_PATH = "data.json";
                         response: { value: payload },
                         getAllResponseHeaders: {
                             value: function () {
-                                return "Content-Type: application/json\r\n";
+                                return "Content-Type: application/json\\r\\n";
                             }
                         }
                     });
